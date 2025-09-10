@@ -13,11 +13,10 @@ title: "Joshua Gulizia - Computer Science Student"
 title_separator: "-"
 name: "Joshua Gulizia"
 description: &description "Joshua Gulizia's academic portfolio and professional website" # Update this with a general description of your site, this is the default if not overridden by a page
-url:
-  https://joshuagulizia.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-  # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl: "" # the subpath of your site, e.g. "/blog"
-repository: "joshuagulizia/joshuagulizia.github.io"
+url: "https://jguliz.github.io" # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+# or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+baseurl: "/GitHub-Page" # the subpath of your site, e.g. "/blog"
+repository: "jguliz/GitHub-Page"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
