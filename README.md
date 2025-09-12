@@ -89,7 +89,7 @@ The website uses a custom dark theme with the following color palette:
 ## 📧 Contact
 
 - **Email**: jgulizia1205@gmail.com
-- **LinkedIn**: [Josh Gulizia](https://www.linkedin.com/in/josh-gulizia-401474290)
+- **LinkedIn**: [Josh Gulizia](https://www.linkedin.com/in/josh-gulizia)
 - **GitHub**: [jguliz](https://github.com/jguliz)
 - **University**: [Computer Science at UH](https://www.uh.edu/nsm/computer-science/)
 

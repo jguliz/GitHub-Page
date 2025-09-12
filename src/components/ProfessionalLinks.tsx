@@ -57,12 +57,12 @@ const ProfessionalLinks: React.FC = () => {
                     <Box display="flex" alignItems="center" mb={2}>
                       <LinkedInIcon sx={{ mr: 1, color: '#0077b5' }} />
                       <Link
-                        href="https://www.linkedin.com/in/josh-gulizia-401474290"
+                        href="https://www.linkedin.com/in/josh-gulizia"
                         target="_blank"
                         rel="noopener"
                         color="inherit"
                       >
-                        josh-gulizia-401474290
+                        josh-gulizia
                       </Link>
                     </Box>
                     

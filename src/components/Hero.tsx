@@ -152,8 +152,8 @@ const Hero: React.FC = () => {
             
             {/* Call to Action Buttons */}
             <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap', mt: 4 }}>
-              <motion.a
-                href="https://www.linkedin.com/in/josh-gulizia-401474290"
+               <motion.a
+                 href="https://www.linkedin.com/in/josh-gulizia"
                 target="_blank"
                 rel="noopener"
                 style={{ textDecoration: 'none' }}
