@@ -119,7 +119,7 @@ const ProfessionalLinks: React.FC = () => {
                            <Box display="flex" alignItems="center" mb={2}>
                              <DescriptionIcon sx={{ mr: 1, color: 'error.main' }} />
                              <Link
-                               href="/GitHub-Page/files/JguliziaResume.pdf"
+                               href="/GitHub-Page/JguliziaResume.pdf"
                                download="JguliziaResume.pdf"
                                target="_blank"
                                rel="noopener"

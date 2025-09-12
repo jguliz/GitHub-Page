@@ -86,7 +86,7 @@ const CV: React.FC = () => {
               <Button
                 variant="contained"
                 size="large"
-                href="/GitHub-Page/files/JguliziaResume.pdf"
+                href="/GitHub-Page/JguliziaResume.pdf"
                 download="JguliziaResume.pdf"
                 startIcon={<Download />}
                 sx={{
