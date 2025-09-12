@@ -16,9 +16,9 @@ const SidebarNavigation: React.FC = () => {
     { id: 'home', label: 'Home', icon: <HomeIcon /> },
     { id: 'about', label: 'About', icon: <PersonIcon /> },
     { id: 'education', label: 'Education', icon: <SchoolIcon /> },
-    { id: 'links', label: 'Contact & Links', icon: <WorkIcon /> },
     { id: 'interests', label: 'Interests', icon: <CodeIcon /> },
     { id: 'projects', label: 'Projects', icon: <RocketLaunchIcon /> },
+    { id: 'links', label: 'Contact & Links', icon: <ContactMailIcon /> },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -60,10 +60,9 @@ const SidebarNavigation: React.FC = () => {
     <Paper
       elevation={3}
       sx={{
-        position: { xs: 'fixed', lg: 'sticky' },
-        top: { xs: '50%', lg: 100 },
-        left: { xs: 20, lg: 20 },
-        transform: { xs: 'translateY(-50%)', lg: 'none' },
+        position: 'fixed',
+        top: 100,
+        left: 20,
         width: 240,
         background: 'rgba(26, 31, 58, 0.95)',
         backdropFilter: 'blur(20px)',
@@ -71,9 +70,9 @@ const SidebarNavigation: React.FC = () => {
         borderRadius: 3,
         zIndex: 1000,
         display: { xs: 'none', lg: 'block' },
-        maxHeight: { xs: '80vh', lg: 'calc(100vh - 120px)' },
+        maxHeight: 'calc(100vh - 120px)',
         overflow: 'auto',
-        margin: { xs: 0, lg: 2 },
+        margin: 0,
       }}
     >
       <Box sx={{ p: 2 }}>

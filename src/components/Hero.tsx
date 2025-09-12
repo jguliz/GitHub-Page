@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Typography, Container, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import profileImage from '../assets/profile.png';
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    // Handle hash navigation when component mounts
+    const handleHashNavigation = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetId = hash.substring(1); // Remove the # symbol
+        const element = document.getElementById(targetId);
+        if (element) {
+          const headerHeight = 80;
+          const elementPosition = element.offsetTop - headerHeight;
+          
+          // Small delay to ensure the page is fully loaded
+          setTimeout(() => {
+            window.scrollTo({
+              top: elementPosition,
+              behavior: 'smooth'
+            });
+          }, 100);
+        }
+      }
+    };
+
+    // Run on mount
+    handleHashNavigation();
+
+    // Also listen for hash changes
+    window.addEventListener('hashchange', handleHashNavigation);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashNavigation);
+    };
+  }, []);
   return (
     <Box
       sx={{
@@ -14,9 +46,10 @@ const Hero: React.FC = () => {
         textAlign: 'center',
         position: 'relative',
         padding: { xs: 2, md: 4 },
+        overflow: 'hidden',
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
         
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -43,8 +76,25 @@ const Hero: React.FC = () => {
                 height: 200,
                 borderRadius: '50%',
                 border: '4px solid #667eea',
-                boxShadow: '0 20px 40px rgba(102, 126, 234, 0.3)',
+                boxShadow: '0 20px 40px rgba(102, 126, 234, 0.3), 0 0 60px rgba(102, 126, 234, 0.2)',
                 objectFit: 'cover',
+                position: 'relative',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  top: -8,
+                  left: -8,
+                  right: -8,
+                  bottom: -8,
+                  borderRadius: '50%',
+                  background: 'linear-gradient(45deg, #667eea, #764ba2, #00d4aa)',
+                  zIndex: -1,
+                  animation: 'rotate 3s linear infinite',
+                },
+                '@keyframes rotate': {
+                  '0%': { transform: 'rotate(0deg)' },
+                  '100%': { transform: 'rotate(360deg)' },
+                },
               }}
             />
           </motion.div>
@@ -64,7 +114,13 @@ const Hero: React.FC = () => {
                 WebkitTextFillColor: 'transparent',
                 fontWeight: 'bold',
                 fontSize: { xs: '3rem', sm: '4rem', md: '5rem' },
-                textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+                textShadow: '0 4px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(102, 126, 234, 0.3)',
+                filter: 'drop-shadow(0 0 10px rgba(102, 126, 234, 0.2))',
+                animation: 'textGlow 2s ease-in-out infinite alternate',
+                '@keyframes textGlow': {
+                  '0%': { filter: 'drop-shadow(0 0 10px rgba(102, 126, 234, 0.2))' },
+                  '100%': { filter: 'drop-shadow(0 0 20px rgba(102, 126, 234, 0.4))' },
+                },
               }}
             >
               Joshua Gulizia

@@ -14,14 +14,34 @@ const Navigation: React.FC = () => {
   };
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Portfolio', href: '/portfolio/' },
-    { name: 'Publications', href: '/publications/' },
-    { name: 'Talks', href: '/talks/' },
-    { name: 'Teaching', href: '/teaching/' },
-    { name: 'CV', href: '/cv/' },
-    { name: 'Blog', href: '/blog/' },
+    { name: 'Home', href: '/GitHub-Page/', isScroll: true, targetId: 'home' },
+    { name: 'Portfolio', href: '/GitHub-Page/', isScroll: true, targetId: 'projects' },
+    { name: 'Publications', href: '/GitHub-Page/publications/' },
   ];
+
+  const handleNavClick = (item: any, event: React.MouseEvent) => {
+    if (item.isScroll) {
+      event.preventDefault();
+      
+      // Check if we're on the home page
+      if (window.location.pathname === '/GitHub-Page/' || window.location.pathname === '/GitHub-Page') {
+        // We're on the home page, so we can scroll to the section
+        const element = document.getElementById(item.targetId);
+        if (element) {
+          const headerHeight = 80;
+          const elementPosition = element.offsetTop - headerHeight;
+          
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        // We're on a different page, navigate to home page with hash
+        window.location.href = `/GitHub-Page/#${item.targetId}`;
+      }
+    }
+  };
 
   const drawer = (
     <Box sx={{ width: 250, height: '100%', background: 'linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%)' }}>
@@ -35,7 +55,13 @@ const Navigation: React.FC = () => {
       </Box>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.name} component="a" href={item.href}>
+          <ListItem 
+            key={item.name} 
+            component="a" 
+            href={item.href}
+            onClick={(e) => handleNavClick(item, e)}
+            sx={{ cursor: 'pointer' }}
+          >
             <ListItemText primary={item.name} />
           </ListItem>
         ))}
@@ -71,6 +97,7 @@ const Navigation: React.FC = () => {
                 WebkitTextFillColor: 'transparent',
                 fontWeight: 'bold',
                 fontSize: '1.5rem',
+                lineHeight: 1.2,
               }}
             >
               Joshua Gulizia
@@ -87,7 +114,7 @@ const Navigation: React.FC = () => {
               <MenuIcon />
             </IconButton>
           ) : (
-            <Box sx={{ display: 'flex', gap: 2 }}>
+            <Box sx={{ display: 'flex', gap: 3, alignItems: 'flex-end', ml: 4 }}>
               {navItems.map((item) => (
                 <motion.a
                   key={item.name}
@@ -95,8 +122,18 @@ const Navigation: React.FC = () => {
                   style={{ textDecoration: 'none', color: 'inherit' }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={(e) => handleNavClick(item, e)}
                 >
-                  <Typography variant="body1" sx={{ px: 2, py: 1 }}>
+                  <Typography 
+                    variant="body1" 
+                    sx={{ 
+                      px: 2, 
+                      py: 1, 
+                      cursor: 'pointer',
+                      lineHeight: 1.2,
+                      fontSize: '1rem',
+                    }}
+                  >
                     {item.name}
                   </Typography>
                 </motion.a>

@@ -10,10 +10,9 @@ const Portfolio: React.FC = () => {
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #2d1b69 100%)',
         py: { xs: 8, lg: 10 },
-        px: { xs: 2, lg: 4 },
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth={false} sx={{ px: { xs: 2, lg: 4 } }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,7 +85,7 @@ const Portfolio: React.FC = () => {
             <Button
               variant="contained"
               size="large"
-              href="/"
+              href="/GitHub-Page/"
               sx={{
                 background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                 '&:hover': {
