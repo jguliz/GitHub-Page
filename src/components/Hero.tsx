@@ -181,7 +181,8 @@ const Hero: React.FC = () => {
               </motion.a>
               
               <motion.a
-                href="/files/JguliziaResume.pdf"
+                href="/GitHub-Page/files/JguliziaResume.pdf"
+                download="JguliziaResume.pdf"
                 target="_blank"
                 rel="noopener"
                 style={{ textDecoration: 'none' }}

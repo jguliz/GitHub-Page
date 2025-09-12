@@ -86,8 +86,8 @@ const CV: React.FC = () => {
               <Button
                 variant="contained"
                 size="large"
-                href="/files/JguliziaResume.pdf"
-                target="_blank"
+                href="/GitHub-Page/files/JguliziaResume.pdf"
+                download="JguliziaResume.pdf"
                 startIcon={<Download />}
                 sx={{
                   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
