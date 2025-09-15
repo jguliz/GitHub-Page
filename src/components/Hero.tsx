@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
         overflow: 'hidden',
       }}
     >
-      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
+      <Container maxWidth={false} sx={{ position: 'relative', zIndex: 1, width: '100%', px: { xs: 2, md: 4 } }}>
         
         <motion.div
           initial={{ opacity: 0, y: 50 }}

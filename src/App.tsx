@@ -62,12 +62,13 @@ function App() {
                 <Box
                   sx={{
                     flex: 1,
-                    paddingLeft: { xs: 2, lg: 2 },
-                    paddingRight: { xs: 2, lg: 4 },
+                    paddingLeft: { xs: 2, lg: 0 },
+                    paddingRight: { xs: 2, lg: 0 },
                     paddingTop: { xs: 8, lg: 10 },
                     paddingBottom: 2,
                     position: 'relative',
                     zIndex: 1,
+                    width: '100%',
                   }}
                 >
                   <Box id="home" sx={{ scrollMarginTop: '100px' }}>
