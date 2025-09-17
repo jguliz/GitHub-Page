@@ -108,7 +108,7 @@ const ProfessionalLinks: React.FC = () => {
                     
                     <Box sx={{ mb: 3 }}>
                       <Typography variant="h6" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-                        🏆 Certifications
+                        Certifications
                       </Typography>
                       <Typography variant="body1" sx={{ fontSize: '1rem' }}>
                         <strong>IBM Data Science Professional Certificate</strong><br/>

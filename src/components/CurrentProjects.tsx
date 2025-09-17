@@ -51,7 +51,7 @@ const CurrentProjects: React.FC = () => {
               <Box display="flex" alignItems="center" mb={3}>
                 <RocketLaunchIcon sx={{ mr: 2, color: 'success.main', fontSize: '2rem' }} />
                 <Typography variant="h4" sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-                  🚀 Featured Project
+                  Featured Project
                 </Typography>
               </Box>
               

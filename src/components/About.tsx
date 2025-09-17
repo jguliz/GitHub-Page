@@ -44,7 +44,7 @@ const About: React.FC = () => {
           >
             <CardContent sx={{ p: 4 }}>
               <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-                📊 Aspiring Data Scientist
+                Aspiring Data Scientist
               </Typography>
               <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
                 I am an aspiring data scientist with a passion for uncovering insights from complex datasets and building intelligent systems that can make a real-world impact. Currently pursuing my Bachelor's degree in Computer Science with a minor in Mathematics at the University of Houston, I'm laying the foundation for a career dedicated to advancing the field of data science.
@@ -55,8 +55,8 @@ const About: React.FC = () => {
               
               {/* Research Vision Section */}
               <Box sx={{ mt: 4, mb: 3 }}>
-                <Typography variant="h6" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-                  🔬 Research Vision
+                <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold' }}>
+                  Research Vision
                 </Typography>
                 <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
                   Through my academic journey and hands-on projects, I've developed a strong foundation in statistical analysis, programming, and data visualization. I believe that data science has the power to transform industries and improve lives, and I'm committed to contributing to this exciting field through both research and practical applications.
@@ -69,7 +69,7 @@ const About: React.FC = () => {
               {/* Data Science Skills */}
               <Box sx={{ mt: 4, mb: 3 }}>
                 <Typography variant="h6" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-                  📈 Data Science Skills
+                  Data Science Skills
                 </Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 3 }}>
                   {['Python', 'R', 'SQL', 'Machine Learning', 'Statistical Analysis', 'Data Visualization', 'Pandas', 'NumPy', 'Scikit-learn', 'PyTorch'].map((skill) => (
@@ -95,7 +95,7 @@ const About: React.FC = () => {
               {/* Research Interests */}
               <Box sx={{ mt: 3 }}>
                 <Typography variant="h6" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-                  🔬 Research Interests
+                  Research Interests
                 </Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
                   {['Machine Learning', 'Quantitative Analytics', 'Statistical Modeling', 'Predictive Analytics', 'Time Series Analysis', 'Financial Modeling', 'Risk Assessment', 'Algorithm Development'].map((interest) => (

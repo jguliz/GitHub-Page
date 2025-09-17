@@ -73,7 +73,7 @@ const Education: React.FC = () => {
                 {/* Relevant Coursework */}
                 <Box sx={{ mt: 3, mb: 3 }}>
                   <Typography variant="h6" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-                    📚 Relevant Coursework
+                    Relevant Coursework
                   </Typography>
                   <Box display="flex" flexWrap="wrap" gap={1} mt={1}>
                     {['Machine Learning', 'Data Science', 'Database Systems', 'Data Structures', 'Statistics'].map((course) => (
@@ -92,7 +92,7 @@ const Education: React.FC = () => {
                 {/* Focus Areas */}
                 <Box sx={{ mt: 3 }}>
                   <Typography variant="h6" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold' }}>
-                    🎯 Focus Areas
+                    Focus Areas
                   </Typography>
                   <Box display="flex" flexWrap="wrap" gap={1} mt={1}>
                     {['Software Engineering', 'Data Structures', 'Algorithms', 'Machine Learning', 'Web Development', 'Mobile Development'].map((area) => (

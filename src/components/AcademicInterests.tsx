@@ -91,7 +91,7 @@ const AcademicInterests: React.FC = () => {
           >
             <CardContent>
               <Typography variant="h4" gutterBottom>
-                🔬 Research Focus Areas
+                Research Focus Areas
               </Typography>
               
               <Grid container spacing={3} sx={{ mt: 2 }}>
